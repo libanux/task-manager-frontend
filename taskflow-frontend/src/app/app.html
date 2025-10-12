@@ -1,0 +1,19 @@
+<!-- Navigation Bar -->
+<nav class="navbar" *ngIf="authService.isLoggedIn()">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <span class="brand-icon">📋</span>
+      <span class="brand-text">TaskFlow</span>
+    </div>
+    
+    <div class="nav-user">
+      <span class="welcome-text">Welcome, {{ authService.getCurrentUser()?.name }}</span>
+      <button class="logout-btn" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>

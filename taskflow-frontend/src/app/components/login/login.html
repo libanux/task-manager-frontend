@@ -1,0 +1,65 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="card-header">
+      <h2 class="text-center">Welcome to TaskFlow</h2>
+      <p class="text-center">Sign in to manage your tasks</p>
+    </div>
+    
+    <div class="card-body">
+      <!-- Error Message -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            formControlName="email"
+            [class.invalid]="email?.invalid && email?.touched"
+            placeholder="Enter your email">
+          <div *ngIf="email?.invalid && email?.touched" class="validation-error">
+            <div *ngIf="email?.errors?.['required']">Email is required</div>
+            <div *ngIf="email?.errors?.['email']">Please enter a valid email address</div>
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+            [class.invalid]="password?.invalid && password?.touched"
+            placeholder="Enter your password">
+          <div *ngIf="password?.invalid && password?.touched" class="validation-error">
+            <div *ngIf="password?.errors?.['required']">Password is required</div>
+            <div *ngIf="password?.errors?.['minlength']">
+              Password must be at least 6 characters long
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="submit-btn" 
+          [disabled]="loginForm.invalid || isLoading">
+          {{ isLoading ? 'Signing in...' : 'Sign In' }}
+        </button>
+      </form>
+
+      <!-- Registration Link -->
+      <div class="register-link">
+        <p>Don't have an account? <a routerLink="/register" class="link">Create one here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
