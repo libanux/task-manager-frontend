@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/taskflow-frontend/server/server.mjs",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "dist/taskflow-frontend/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/taskflow-frontend/server/server.mjs"
+    }
+  ]
+}
