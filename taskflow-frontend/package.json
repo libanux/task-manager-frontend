@@ -2,15 +2,15 @@
   "name": "taskflow-frontend",
   "version": "0.0.0",
   
-   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr": "node dist/taskflow-frontend/server/server.mjs",
-    "vercel-build": "npm run build"
-  },
+  "scripts": {
+  "ng": "ng",
+  "start": "ng serve",
+  "build:ssr": "ng build && ng run taskflow-frontend:server",
+  "serve:ssr": "node dist/taskflow-frontend/server/server.mjs",
+  "vercel-build": "npm run build:ssr"
+},
+
+
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,

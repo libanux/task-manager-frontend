@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/taskflow-frontend/browser",
+  "builds": [
+    { "src": "dist/taskflow-frontend/server/server.mjs", "use": "@vercel/node" },
+    { "src": "dist/taskflow-frontend/browser/**/*", "use": "@vercel/static" }
+  ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.csr.html"
-    }
+    { "src": "/(.*)", "dest": "dist/taskflow-frontend/server/server.mjs" }
   ]
 }
