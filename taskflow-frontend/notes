@@ -1,0 +1,37 @@
+"scripts": {
+"ng": "ng",
+"start": "ng serve",
+"build:ssr": "ng build && ng run taskflow-frontend:server",
+"serve:ssr": "node dist/taskflow-frontend/server/server.mjs",
+"vercel-build": "npm run build:ssr"
+},
+
+explain above:
+
+-npm start-->This runs your CSR (Client-Side Rendering) Angular app —
+it’s the normal development mode where Angular serves files locally using the Angular
+CLI dev server (localhost:4200).
+so When you run npm start, Angular uses its own dev server (ng serve) — it only serves frontend files.
+Node.js does not run here, so any server-side rendering (SSR) or backend logic won’t work.
+It’s pure client-side rendering — the browser handles everything.
+
+-npm run serve:ssr--->
+This runs your SSR (Server-Side Rendering) app after it has been built.
+It starts the Node.js Express server that Angular Universal created.
+So yes — this is how you run the built SSR app (not CSR).
+so To run an SSR project correctly:
+You should build and then serve it with Node.js:
+npm run build:ssr
+npm run serve:ssr
+This will:
+Build both the browser and server bundles.
+Start the Node.js Express server from dist/.../server/server.mjs.
+Serve pages rendered on the server.
+
+-npm run build:ssr--->
+This builds your Angular Universal (SSR) app:
+The first part ng build builds the client bundle.
+The second part ng run taskflow-frontend:server builds the server bundle (for Node.js).
+
+-"vercel-build": "npm run build:ssr"--->
+Vercel automatically runs this script to build your app as SSR before deployment.

@@ -7,9 +7,8 @@
   "start": "ng serve",
   "build:ssr": "ng build && ng run taskflow-frontend:server",
   "serve:ssr": "node dist/taskflow-frontend/server/server.mjs",
-  "vercel-build": "npm run build:ssr"
+ "vercel-build": "npm run build:ssr && xcopy dist\\taskflow-frontend\\browser browser /E /I && xcopy dist\\taskflow-frontend\\server\\server.mjs . /Y"
 },
-
 
   "prettier": {
     "printWidth": 100,
