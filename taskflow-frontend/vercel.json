@@ -3,18 +3,18 @@
   "framework": "angular",
   "builds": [
     {
-      "src": "dist/taskflow-frontend/server/server.mjs",
+      "src": "dist/taskflow-frontend/server.mjs",
       "use": "@vercel/node"
     },
     {
-      "src": "dist/taskflow-frontend/browser/**",
+      "src": "dist/taskflow-frontend/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/taskflow-frontend/server/server.mjs"
+      "dest": "dist/taskflow-frontend/server.mjs"
     }
   ]
 }
