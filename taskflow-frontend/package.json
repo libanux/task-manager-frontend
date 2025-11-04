@@ -6,8 +6,8 @@
   "ng": "ng",
   "start": "ng serve",
   "build:ssr": "ng build --configuration=production && ng run taskflow-frontend:server:production",
-  "serve:ssr": "node dist/taskflow-frontend/server/server.mjs",
-  "vercel-build": "npm run build:ssr"
+  "serve:ssr": "node dist/taskflow-frontend/server/server.mjs"
+  
 },
 
   "prettier": {
