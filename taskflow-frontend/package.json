@@ -9,7 +9,6 @@
   "build:ssr": "ng build --configuration=production && ng run taskflow-frontend:server",
   "serve:ssr": "node dist/taskflow-frontend/server/server.mjs"
 },
-
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
