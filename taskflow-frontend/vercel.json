@@ -2,18 +2,24 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.mjs",
+      "src": "dist/taskflow-frontend/server/server.mjs",
       "use": "@vercel/node"
     },
     {
-      "src": "browser/**/*",
+      "src": "dist/taskflow-frontend/browser/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/(.*\\.\\w+$)",
+      "dest": "/dist/taskflow-frontend/browser/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "server.mjs"
+      "dest": "/dist/taskflow-frontend/server/server.mjs"
     }
-  ]
+  ],
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist"
 }

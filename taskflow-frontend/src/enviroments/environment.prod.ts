@@ -3,5 +3,14 @@ export const environment = {
   apiUrl: 'https://task-manager-backend-1-a4gw.onrender.com/api'
 };
 
-/*ng build --prod
-# Uses live backend URL */
+
+
+ /*this is Production Environment
+
+Backend: Runs on Render.com
+
+Database: Live production database (real user data)
+
+Frontend: Connects to deployed backend
+
+Result: Real users interact with this */
