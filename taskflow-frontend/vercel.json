@@ -1,12 +1,8 @@
 {
   "version": 3,
   "framework": "angular",
-  "builds": [
-    {
-      "src": "dist/taskflow-frontend/browser/**",
-      "use": "@vercel/static"
-    }
-  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/taskflow-frontend/browser",
   "routes": [
     {
       "src": "/(.*)",
