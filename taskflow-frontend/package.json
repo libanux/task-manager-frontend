@@ -4,8 +4,10 @@
   "scripts": {
   "ng": "ng",
   "start": "ng serve",
-  "build": "npx ng build --configuration=production"
+  "build": "npx ng build --configuration=production",
+  "vercel-build": "npm install -g @angular/cli && npm run build"
 }
+
 ,
   "prettier": {
     "printWidth": 100,
