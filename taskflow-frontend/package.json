@@ -2,13 +2,14 @@
   "name": "taskflow-frontend",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "npx ng build --configuration production",
-    "vercel-build": "npx ng build --configuration production",
-    "postinstall": "npx ng version"
-  },
+ "scripts": {
+  "ng": "ng",
+  "preinstall": "npm install -g @angular/cli",
+  "build": "npx ng build --configuration production",
+  "vercel-build": "npm install -g @angular/cli && npx ng build --configuration production",
+  "start": "npx ng serve --host 0.0.0.0"
+},
+
   "dependencies": {
     "@angular/common": "^20.3.10",
     "@angular/compiler": "^20.3.10",
