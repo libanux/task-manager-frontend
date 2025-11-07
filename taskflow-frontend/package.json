@@ -5,9 +5,8 @@
   "ng": "ng",
   "start": "ng serve",
   "build": "npx ng build --configuration=production",
-  "vercel-build": "npm install -g @angular/cli && npm run build"
+  "vercel-build": "npx ng build --configuration=production"
 }
-
 ,
   "prettier": {
     "printWidth": 100,
