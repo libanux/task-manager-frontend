@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "npx ng build --configuration production",
-    "vercel-build": "npx ng build --configuration production"
+    "vercel-build": "npx ng build --configuration production",
+    "postinstall": "npx ng version"
   },
   "dependencies": {
     "@angular/common": "^20.3.10",
