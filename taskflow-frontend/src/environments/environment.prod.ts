@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://task-manager-backend-1-a4gw.onrender.com/api'
+  apiUrl: 'https://task-manager-backend-oez7.onrender.com/api'
 };
 
 

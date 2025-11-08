@@ -7,7 +7,7 @@
   "preinstall": "npm install -g @angular/cli",
   "build": "npx ng build --configuration production",
   "vercel-build": "npm install -g @angular/cli && npx ng build --configuration production",
-  "start": "npx ng serve --host 0.0.0.0"
+  "start": "ng serve --configuration=production"
 },
 
   "dependencies": {
