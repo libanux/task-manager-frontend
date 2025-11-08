@@ -2,14 +2,12 @@
   "name": "taskflow-frontend",
   "version": "0.0.0",
   "private": true,
- "scripts": {
-  "ng": "ng",
-  "build": "ng build",
-  "dev": "ng serve",
-  "start": "ng serve",
-  "vercel-build": "ng build"
-},
-
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build",
+    "dev": "ng serve",
+    "start": "ng serve"
+  },
   "dependencies": {
     "@angular/common": "^20.3.10",
     "@angular/compiler": "^20.3.10",
