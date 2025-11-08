@@ -4,10 +4,10 @@
   "private": true,
  "scripts": {
   "ng": "ng",
-  "build": "ng build --configuration=production",
-  "vercel-build": "ng build --configuration=production",
+  "build": "ng build",
   "dev": "ng serve",
-  "start": "ng serve"
+  "start": "ng serve",
+  "vercel-build": "ng build"
 },
 
   "dependencies": {
