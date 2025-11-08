@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "framework": "angular",
+  "buildCommand": "npm run clean-build",
   "outputDirectory": "dist/taskflow-frontend/browser",
   "routes": [
     {

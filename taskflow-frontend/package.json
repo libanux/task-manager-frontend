@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "build": "ng build --configuration=production",
     "dev": "ng serve",
-    "start": "ng serve"
+    "start": "ng serve",
+    "clean-build": "rm -rf dist && ng build --configuration=production"
   },
   "dependencies": {
     "@angular/common": "^20.3.10",
