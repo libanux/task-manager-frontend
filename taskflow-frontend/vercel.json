@@ -1,7 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "dist/taskflow-frontend/browser/**", "use": "@vercel/static" }
+    { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/index.html" }
