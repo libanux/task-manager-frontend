@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "ng": "ng",
-    "build": "ng build --configuration=production",
-    "dev": "ng serve",
-    "start": "ng serve",
-    "clean-build": "rm -rf dist && ng build --configuration=production"
-  },
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build --configuration=production",
+  "vercel-build": "ng build --configuration=production"
+}
+,
   "dependencies": {
     "@angular/common": "^20.3.10",
     "@angular/compiler": "^20.3.10",
