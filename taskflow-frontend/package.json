@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-  "ng": "ng",
-  "start": "ng serve",
-  "build": "ng build --configuration=production",
-  "vercel-build": "ng build --configuration=production"
-}
-,
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+     "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/taskflow-frontend/browser"
+
+  },
   "dependencies": {
     "@angular/common": "^20.3.10",
     "@angular/compiler": "^20.3.10",
@@ -24,9 +24,10 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/cli": "^20.3.9",
     "@angular-devkit/build-angular": "^20.3.9",
+    "@angular/cli": "^20.3.9",
     "@angular/compiler-cli": "^20.3.10",
+    "@ngx-env/builder": "^20.1.1",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
     "typescript": "~5.9.2"
