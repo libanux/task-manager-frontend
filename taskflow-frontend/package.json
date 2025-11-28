@@ -6,7 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-     "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/taskflow-frontend/browser"
+    "deploy": "npx angular-cli-ghpages --dir=dist/taskflow-frontend/browser --repo=https://github.com/libanux/task-manager-frontend.git --branch=gh-pages"
+
 
   },
   "dependencies": {
